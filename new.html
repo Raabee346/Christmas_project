@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+</head>
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; 
+            color: #333;
+        }
+
+        .navbar {
+        background-color: #0d1b2a; 
+        padding: 14px 20px;
+        }
+
+        .nav-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        }
+
+        .nav-item {
+        margin: 0 10px; 
+        }
+
+        .nav-item a {
+        text-decoration: none;
+        color: white; 
+        font-weight: bold;
+        padding: 5px 10px;
+        transition: background-color 0.3s;
+        }
+
+        .nav-item a:hover {
+        background-color: #1b263b; 
+        border-radius: 4px; 
+        }
+
+        .nav-logo {
+        margin: 0 20px; 
+        }
+
+        .nav-logo img {
+        height: 40px; 
+        display: block;
+        }
+
+        .buy-now {
+        color: #00c7ff;
+        font-weight: bold;
+        }
+
+        .buy-now:hover {
+        background-color: #0088cc; 
+        color: white; 
+        border-radius: 4px;
+        }
+
+        header{
+            background-image: url(./assets/home_xmas_slider.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        section.christmas {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        section.christmas img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Discounts section */
+        section.discounts {
+            text-align: center;
+            margin-top: 385px;
+        }
+
+        .contentheading ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0px;
+            list-style-type: none;
+        }
+
+        .line {
+            height: 3px;
+            padding: 0px 140px;
+            background-color: #89bdbc;
+        }
+        .contentheading h1 {
+            color: hsl(236.47deg 22.67% 29.41%);
+            font-size: 45px!important;
+            text-transform: uppercase;
+            
+        }
+        .contentheading img {
+            width: 200px;
+        }
+        .content1{
+            
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .content1 ul{
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .content1 ul li{
+            margin: 10px 10px;
+            width: 500px;
+            font-size: 18px;
+            color: hsl(261.18deg 6.83% 48.82%);
+        }
+        .products,.stepwork{
+            margin-left: 400px;
+        }
+        .products ul,.stepwork ul{
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+          
+        }
+        .products ul li,.stepwork ul li{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 312px;
+        }
+        .products ul li button{
+            background-color: red;
+            color: white;
+            border-style: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 18px;
+        }
+        .products ul li h2,.stepwork ul li h2{
+            color: hsl(236.47deg 22.67% 29.41%);
+            font-size: 30px;
+        }
+        .products ul li span,.stepwork ul li p{
+            color: hsl(261.18deg 6.83% 48.82%);
+            font-size: 18px;
+            text-align: center;
+        }
+
+    .seemore {
+        background-color: hsl(201.43deg 25.93% 89.41%);
+        height: 100px;
+        display: flex;
+        margin-top: 100px;
+        justify-content: center;
+        align-items: center;
+        gap: 300px;
+        
+
+    }
+
+    .seemore h2 {
+        color: hsl(236.47deg 22.67% 29.41%);
+        font-size: 30px;
+        font-weight: lighter;
+    }
+
+    .seemore button {
+        background-color: hsl(236.6deg 26.63% 39.02%);
+        color: white;
+        border-style: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        font-size: 18px;
+        font-weight: lighter;
+
+    }
+
+    .step {
+        height: 120vh;
+        background-image: url(/assets/home_xmas_sweater_bg.png);
+
+        margin-top: -20px;
+        text-align: center;
+    }
+
+    .works ul li img{
+         margin-top: 100px;
+    }
+    .stepwork ul li img {
+        margin-top: 100px;
+    }
+
+    .stepwork ul li button {
+        background-color: hsl(236.47deg 22.67% 29.41%);
+        color: white;
+        border-style: none;
+        padding: 10px 10px;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .line2 {
+        color: hsl(42.86deg 19.44% 85.88%);
+        height: 3px;
+        padding: 0px 140px;
+    }
+
+    .about {
+        background-color: hsl(178.93deg 23.14% 52.55%);
+        margin-top: -25px;
+        height: 220vh;
+
+    }
+
+    .horse {
+        background-image: url(/assets/home_xmas_pattern1.png);
+        background-size: contain;
+        height: 50px;
+
+
+    }
+
+    .promotion {
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin-top: 100px;
+        margin-left: 200px;
+        width: 925px;
+    }
+
+    .promotion h1 {
+        color: hsl(236.47deg 22.67% 29.41%);
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-top: 80px;
+        margin-left: 36px;
+        font-weight: bold;
+    }
+
+    .promotion ul {
+        list-style-type: none;
+        display: flex;
+        gap: 15px;
+    }
+
+    .promotion h3,
+    p {
+        color: #f1f1f1;
+        margin-left: 45px;
+    }
+
+    .promotion #card h3 {
+        color: hsl(236.47deg 22.67% 29.41%) !important;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bolder;
+    }
+
+    .content2 h3{
+        color: hsl(236.47deg 22.67% 29.41%) !important;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bolder;
+        margin-left: 45px;
+    }
+    .content3 h3 {
+        color: hsl(236.47deg 22.67% 29.41%) !important;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bolder;
+        margin-left: 45px;
+    }
+
+    .content2 p{
+        color: #f1f1f1;
+    }
+    .content3 p {
+        color: #f1f1f1;
+    }
+
+    .second{
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin-top: 100px;
+        margin-left: 200px;
+        width: 925px;
+        display: flex;
+    }
+    .third{
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-top: 100px;
+        margin-left: 200px;
+        width: 925px;
+        display: flex;
+
+
+    }
+
+    .last {
+        background-color: hsl(353.45deg 48.97% 52.35%);
+        height: 78vh;
+    }
+
+    .blue ul {
+        margin-top: 100px;
+    }
+
+    .blue input {
+
+        height: 25px;
+        width: 330px;
+        margin-top: 10px;
+    }
+
+    .blue button {
+        padding: 7px 12px;
+        border-radius: 5px;
+        border-style: none;
+        background-color: hsl(236.47deg 22.67% 29.41%);
+        color: white;
+    }
+
+    .blue p {
+        font-size: 15px;
+        color: darkgrey;
+        margin-bottom: 100px;
+    }
+
+    .xmas {
+        background-image: url(/assets/home_xmas_pattern2.png);
+        background-size: contain;
+        height: 50px;
+    }
+
+    .tree {
+        background-image: url(/assets/home_xmas_pattern3.png);
+        background-size: contain;
+        height: 50px;
+        margin-top: 265px;
+    }
+
+    .footer {
+        background-color: hsl(236.67deg 37.5% 18.82%);
+        margin-top: -13px;
+        text-align: center;
+        height: 55px;
+    }
+
+    .foot {
+        font-size: 12px;
+    }
+
+
+    span {
+        color: hsl(236, 23%, 43%);
+    }
+    .blue{
+        text-align: center;
+    }
+
+</style>
+<header>
+    <nav class="navbar">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#">Start</a></li>
+          <li class="nav-item"><a href="#">Products</a></li>
+          <li class="nav-item"><a href="#">How it works</a></li>
+          <li class="nav-logo">
+            <a href="#"><img src="./assets/xmas.png" alt="Logo"></a>
+          </li>
+          <li class="nav-item"><a href="#">About</a></li>
+          <li class="nav-item"><a href="#">Get a discount</a></li>
+          <li class="nav-item"><a href="#" class="buy-now">Buy now</a></li>
+        </ul>
+      </nav>
+    <section class="christmas">
+        <img src="./assets/home_xmas_slider_slogan.png" alt="">
+    </section>
+    <section class="discounts">
+
+        <div class="contentheading">
+            <ul>
+                <li><img src="./assets/home_xmas_sep.png" alt=""></li>
+                <li>
+                    <h1>Top products discounts</h1>
+                </li>
+                <li class="line"></li>
+            </ul>
+        </div>
+
+        <div class="content1">
+            <ul>
+                <li>Duis commodo aliquam iaculis. Maecenas molestie quam id augue ondimentum ut omare tortor elementum.
+                    Donec luctus at turpis et fringilla.Donec fringilla sed.Sed el augue aliquet, dignissim</li>
+                <li>Nunc volutpat lorem in metus rutrum luctus. Pellentesqye vel metus dolor,suspendisse vel pulvinar
+                    nisl. Curabitur vitae ligula facilisis, elementum risus amet. Ut dapibus, augue at fringilla
+                    Dosueresis.</li>
+            </ul>
+        </div>
+        <div class="products">
+            <ul>
+                <li>
+                    <img src="./assets/pink.jpg" alt="">
+                    <button disabled="disabled">-34%</button>
+                    <h2>Lorem ipsum dol</h2>
+                    <span>Suspendisse sed imperdiet dui, vel egestas
+                        urna. Morbi sit amet elit ut elit.</span>
+                </li>
+                <li>
+                    <img src="./assets/brown.jpg" alt="">
+                    <button disabled="disabled">-40%</button>
+                    <h2>Quantum elle</h2>
+                    <span>Dui vel egestas uma. Morbi sit amet elit ut eli
+                        mattis efficitur sed</span>
+                </li>
+                <li>
+                    <img src="./assets/green.jpg" alt="">
+                    <button disabled="disabled">-17%</button>
+                    <h2>Triton patual</h2>
+                    <span>Curabitur vitae convallis turpis, ut rutrum purus.
+                        ult a dolor tellus</span>
+                </li>
+
+            </ul>
+            <ul>
+                <li>
+                    <img src="./assets/sky.jpg" alt="">
+                    <button disabled="disabled">-23%</button>
+                    <h2>Et viverra auctor</h2>
+                    <span>Cras pharetra, dolor et viverra auctor, dui nisi
+                        condimentum aliquet metus.</span>
+                </li>
+                <li>
+                    <img src="./assets/gold.jpg" alt="">
+                    <button disabled="disabled">-9%</button>
+                    <h2>Morbi posuere</h2>
+                    <span>Donec blandit, est vestibulum congue pretium,
+                        erat augue dictum.</span>
+                </li>
+                <li>
+                    <img src="./assets/blue.jpg" alt="">
+                    <button disabled="disabled">-50%</button>
+                    <h2>Fringilla mollis</h2>
+                    <span>Lectus id pellentesque tellus libero a libero!
+                        Nullam fringilla mollis.</span>
+                </li>
+
+            </ul>
+        </div>
+        <div class="seemore">
+            <h2>Want more products?</h2>
+            <button>See more</button>
+        </div>
+    </section>
+
+
+    <section class="step">
+        <div class="contentheading works">
+            <ul>
+                <li><img src="./assets/home_xmas_sep (1).png" alt=""></li>
+                <li>
+                    <h1>How it works</h1>
+                </li>
+                <li class="line"></li>
+            </ul>
+        </div>
+        <div class="stepwork">
+            <ul>
+                <li>
+                    <img src="./assets/stick.png" alt="">
+                    <button disabled="disabled">1</button>
+                    <h2>Step 1</h2>
+                    <span>Vivamus pulvinar interdum egestas. Integer vitae
+                        i et nibh finibus rutrum at nec turpis. Vivamus in
+                        sodales enim. Nullam nec sapien elit</span>
+                </li>
+                <li>
+                    <img src="./assets/dec.png" alt="">
+                    <button disabled="disabled">2</button>
+                    <h2>Step 2</h2>
+                    <span>Nam cursus interdum tellus vitae pulvinar?Maecenas vel ipsum maximus massa maximus
+                        lacinia ut nec ante. Sed sagittis, ligula quis.</span>
+                </li>
+                <li>
+                    <img src="./assets/belt.png" alt="">
+                    <button disabled="disabled">3</button>
+                    <h2>Step 3</h2>
+                    <span>Quisque nec consequat sapien, ac sollicitudin
+                        sagittis luctus nisl eget, sollicitudin fringilla.</span>
+                </li>
+            </ul>
+
+        </div>
+
+    </section>
+    <section class="about">
+        <div class="horse">
+
+        </div>
+        <div class="promotion">
+            <h1>about promotion</h1>
+            <ul>
+                <li><img src="./assets/home_xmas_img1.png" alt=""></li>
+                <li><img src="./assets/home_xmas_img2.png" alt=""></li>
+                <li id="card">
+                    <h3>Magni dolores</h3>
+                    <p> Nemo enim ipsam voluptatem quita voluptas sit aspernatur aut odit aut fugit, sed qula
+                        consequuntur magni dolores eos qui ratione
+                        voluptatem sequi nesciunt. Neque porro quisquam
+                        st. qui dolorem im quaerat voluptatem.</p>
+                </li>
+            </ul>
+            <h3>Cepteur sint occaecat cupidatat non proident, sunt in culpa qui oficia
+                deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste
+                runt moilt anim id est la
+                natus error sit voluptatem accusantium doloremque laudantium, tot
+                ram aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                architecto beatae</h3>
+        </div>
+        <div class="second">
+            <img src="./assets/home_xmas_img3.png" alt="">
+            <div class="content2">
+                <h3>Neque porro quisquam</h3>
+                <p> Nemo enim ipsam voluptatem quita voluptas sit aspernatur aut odit aut fugit, sed qula
+                    consequuntur magni dolores eos qui ratione
+                    voluptatem sequi nesciunt. Neque porro quisquam
+                    st. qui dolorem im quaerat voluptatem. <br> <br>Vestibulum condimentum nibh mauris, tempus euismod
+                    diam hendrerit ut
+                    Nullam dignissim diam eget lorem feugiat, in maximus nibh semper. Ut
+                    maximus, lectus sit amet imperdiet aliquam, nibh magna sollicitudin quam
+                    sollicitudin cursus sapien nullam.</p>
+            </div>
+
+        </div>
+
+        <div class="third">
+            <div class="content3">
+                <h3>Morbi ultricies fermentum</h3>
+                <p> Ut et ex vitae lectus ultrices consectetun!Pellentesqye lactus erat, accmsan sed
+                    turpis ac, consectetur semper dui. Sed convallis facilisis ligula? Nulla amet <br><br>
+                    Praesent et consectetur neque. Aenean nec enim sit amet diam bibendum
+                    mollis eu sed diam. Cras ac sapien odio? In congue nisi vitae turpis egestas
+                    orci aliquam. Fusce ut egestas lectus, vel lacinia tellus. Morbi ultricies
+                    fermentum dolor quis placerat. Vestibulum et suscipit lacus. Integer rutrum
+                    iaculis.</p>
+            </div>
+            <div class="content3img">
+                <img src="./assets/home_xmas_img4.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="last">
+        <div class="xmas">
+        </div>
+        <div class="contentheading blue">
+            <ul>
+                <li><img src="./assets/home_xmas_sep.png" alt=""></li>
+                <li>
+                    <h1>Get a Discounts Easily</h1>
+                </li>
+                <li class="line"></li>
+            </ul>
+            <input type="text" placeholder="Your email address">
+            <button>Sign Up</button>
+            <p>Nemo enim ipsam voluptatem quita voluptas sit aspernatur aut odit aut fugit, sed qula consequuntur
+                <br>magni dolores eos qui ratione voluptatem</p>
+        </div>
+        <div class="tree">
+        </div>
+
+    </section>
+    <section class="footer">
+        <div class="foot">
+            <p> © 2017 BeXmas - BeTheme. Muffin group - HTML by <span>Beantown Themes</span></p>
+        </div>
+    </section>
+</header>
+
+</body>
+
+</html>
